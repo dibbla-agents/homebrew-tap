@@ -5,40 +5,56 @@
 class Dibbla < Formula
   desc "Dibbla CLI for managing Dibbla applications"
   homepage "https://dibbla.com"
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.2/dibbla_1.1.2_darwin_amd64.tar.gz"
-      sha256 "041009fcb667d9ee7d169e3376dc73ccd5ed176a9ee2ac0a31050cc21a93f4f2"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.3/dibbla_1.1.3_darwin_amd64.tar.gz"
+      sha256 "89eb77cc2c59976d91d6ee6c3f97462b689c167103e0d4b98d824d8f4a1d0d98"
 
       def install
         bin.install "dibbla"
+        # Generate and install shell completions
+        (bash_completion/"dibbla").write `#{bin}/dibbla completion bash`
+        (zsh_completion/"_dibbla").write `#{bin}/dibbla completion zsh`
+        (fish_completion/"dibbla.fish").write `#{bin}/dibbla completion fish`
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.2/dibbla_1.1.2_darwin_arm64.tar.gz"
-      sha256 "f121902a811099a35307b67f4f1e416006bc3914acef0a0f6c67dac9a5fdefcc"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.3/dibbla_1.1.3_darwin_arm64.tar.gz"
+      sha256 "92ea0b14c8b6f8d34adb116e0370ba6db071f5bf5c7391d3c8312e7edeff125e"
 
       def install
         bin.install "dibbla"
+        # Generate and install shell completions
+        (bash_completion/"dibbla").write `#{bin}/dibbla completion bash`
+        (zsh_completion/"_dibbla").write `#{bin}/dibbla completion zsh`
+        (fish_completion/"dibbla.fish").write `#{bin}/dibbla completion fish`
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.2/dibbla_1.1.2_linux_amd64.tar.gz"
-      sha256 "7a1a05da8b06388fa7e4e2f213372344e680b1b30abaa7aa35a56c727baa3d05"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.3/dibbla_1.1.3_linux_amd64.tar.gz"
+      sha256 "49d51668d175346064a80cb63c919055162ff06f87b89f7f1a8bcf10a3146013"
       def install
         bin.install "dibbla"
+        # Generate and install shell completions
+        (bash_completion/"dibbla").write `#{bin}/dibbla completion bash`
+        (zsh_completion/"_dibbla").write `#{bin}/dibbla completion zsh`
+        (fish_completion/"dibbla.fish").write `#{bin}/dibbla completion fish`
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.2/dibbla_1.1.2_linux_arm64.tar.gz"
-      sha256 "4bbffafee4bca61a79a7c23714faa826172bbb5997aa556db493540dafd2b3a6"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.1.3/dibbla_1.1.3_linux_arm64.tar.gz"
+      sha256 "167df72cf09ccb7358ebb2d43b8a2cf95fa9648cac613a7b002e30cc55ad1f5b"
       def install
         bin.install "dibbla"
+        # Generate and install shell completions
+        (bash_completion/"dibbla").write `#{bin}/dibbla completion bash`
+        (zsh_completion/"_dibbla").write `#{bin}/dibbla completion zsh`
+        (fish_completion/"dibbla.fish").write `#{bin}/dibbla completion fish`
       end
     end
   end
