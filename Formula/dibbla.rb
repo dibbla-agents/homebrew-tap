@@ -10,7 +10,7 @@ class Dibbla < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.17/dibbla_1.2.17_darwin_amd64.tar.gz"
-      sha256 "2c39ca876f549b322df627c974e9f4d25c4ad001998d03afe992a4056564c6fd"
+      sha256 "9b3c8dc7016ced376a376c76e798e33ff6f566ff2f809f0426908900ac3700ec"
 
       define_method(:install) do
         bin.install "dibbla"
@@ -22,7 +22,7 @@ class Dibbla < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.17/dibbla_1.2.17_darwin_arm64.tar.gz"
-      sha256 "19de2fbf3acde645da7734e6e15140838eb6bc2b28b950adede7a4fb2da628d2"
+      sha256 "badac9c421f235bc689377e8227fdb75f39d29a7f459aa370243b3fe7432456a"
 
       define_method(:install) do
         bin.install "dibbla"
