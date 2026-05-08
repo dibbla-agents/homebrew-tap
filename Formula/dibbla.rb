@@ -5,12 +5,12 @@
 class Dibbla < Formula
   desc "Dibbla CLI for managing Dibbla applications"
   homepage "https://dibbla.com"
-  version "1.2.27"
+  version "1.2.28"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.27/dibbla_1.2.27_darwin_amd64.tar.gz"
-      sha256 "a1ecdabf8c002ac25407e8e89996ee74d89586fe986189dfadb29ff157e42399"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.28/dibbla_1.2.28_darwin_amd64.tar.gz"
+      sha256 "d2ae8bab529175272c22feab47f88b9cc621bb687c62398ffecfc819f4c79571"
 
       define_method(:install) do
         bin.install "dibbla"
@@ -21,8 +21,8 @@ class Dibbla < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.27/dibbla_1.2.27_darwin_arm64.tar.gz"
-      sha256 "c9f9ef164ffe7c845759356b8771a377a006df3029679ec248baaf90c3b555d3"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.28/dibbla_1.2.28_darwin_arm64.tar.gz"
+      sha256 "6bae312f3b2f2b736b912e32e07b32680058d379f9b4857ff0ef9ac193d890eb"
 
       define_method(:install) do
         bin.install "dibbla"
@@ -36,8 +36,8 @@ class Dibbla < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.27/dibbla_1.2.27_linux_amd64.tar.gz"
-      sha256 "93c22b4da18019253142e8f21f46be78af54658c0e8d0dcf6195f2ce8c7eef5f"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.28/dibbla_1.2.28_linux_amd64.tar.gz"
+      sha256 "0209943c58914011cb72b1f9a3c2c2d959cd9a68381a1e40b46f58a52c4f8674"
       define_method(:install) do
         bin.install "dibbla"
         # Generate and install shell completions
@@ -47,8 +47,8 @@ class Dibbla < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.27/dibbla_1.2.27_linux_arm64.tar.gz"
-      sha256 "4201f378fb08f53ac985c23183ca34a7435524118f4ca798daf1ae562edfa464"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.28/dibbla_1.2.28_linux_arm64.tar.gz"
+      sha256 "066229e04b69e44b9ccb97a83095131c33df51011f4eac17e8d8ad5c3cf75e53"
       define_method(:install) do
         bin.install "dibbla"
         # Generate and install shell completions
