@@ -10,27 +10,27 @@
 class Dibbla < Formula
   desc "Dibbla CLI for managing Dibbla applications"
   homepage "https://dibbla.com"
-  version "1.2.79"
+  version "1.2.80"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.79/dibbla_1.2.79_darwin_amd64.tar.gz"
-      sha256 "0998d97306f3e8f50b8e7eb2ed3b26e6a4ac5b4f1dadf637bd27b62f09546a58"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.80/dibbla_1.2.80_darwin_amd64.tar.gz"
+      sha256 "954b5bd7e377aada0eb67e80d78219d1e3d779d56164d9d4db186c5269ca1a9b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.79/dibbla_1.2.79_darwin_arm64.tar.gz"
-      sha256 "74079ece5b470628d2ca4b399a17835f226e663aa06e7b9a62359f906e8ffaec"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.80/dibbla_1.2.80_darwin_arm64.tar.gz"
+      sha256 "192f165e216b53b725bf62095466ce435dcfd68cb4e9bef2005d2fd8d2b36a1e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.79/dibbla_1.2.79_linux_amd64.tar.gz"
-      sha256 "3a1fea81ae127fa8b9b90b71a5dafcaf9a859b67631195e2fd54068f73747ff8"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.80/dibbla_1.2.80_linux_amd64.tar.gz"
+      sha256 "05c9eeee30f3db4acb9392eecbdbc9d71f1952c0bc4bb26217a5098f55d3da5c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.79/dibbla_1.2.79_linux_arm64.tar.gz"
-      sha256 "7d7cf3dde3c21c0e2cd9be6e17e97337923010bc245a58f0965164c244b3fb88"
+      url "https://github.com/dibbla-agents/dibbla-cli/releases/download/v1.2.80/dibbla_1.2.80_linux_arm64.tar.gz"
+      sha256 "3ac2decabc7bb42863dcb3a3970716cd12aaadabeeab5ab3de3351d98e7c6005"
     end
   end
 
